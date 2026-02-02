@@ -1,2 +1,2 @@
-# planck_madness
+# planck-madness
 Custom Planck Configuration
