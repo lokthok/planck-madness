@@ -17,6 +17,8 @@ enum custom_keycodes {
     PY_CLASS,           // class :
     
     // Text emoticons
+
+    EMOJI_PICKER,       // Opens macOS emoji picker (Ctrl+Cmd+Space)
     EMOJI_1,            // ( ._.)
     EMOJI_2,            // (._. )
     EMOJI_3,            // ó.Ô

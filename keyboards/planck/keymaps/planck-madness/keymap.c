@@ -51,9 +51,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ├──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┤
  * │ Tab  │  A   │  S   │  D   │  F   │  G   │  H   │  J   │  K   │  L   │  /\  │ Bksp │
  * ├──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┤
- * │Shift │  Z   │  X   │  C   │  V   │  B   │  N   │  M   │  ,;  │  .:  │  ↑   │Enter │
+ * │Shift │  Z   │  X   │  C   │  V   │  B   │  N   │  M   │  ,;  │  .:  │  ▲   │Enter │
  * ├──────┼──────┼──────┼──────┼──────┼──────┴──────┼──────┼──────┼──────┼──────┼──────┤
- * │ Ctrl │ Opt  │ Cmd  │  FN  │Symbol│    Space    │  =+  │  -_  │  ←   │  ↓   │  →   │
+ * │ Ctrl │ Opt  │ Cmd  │  FN  │Symbol│    Space    │  =+  │  -_  │  ◀︎   │  ▼   │  ►   │
  * └──────┴──────┴──────┴──────┴──────┴─────────────┴──────┴──────┴──────┴──────┴──────┘
  */
 [_BASE] = LAYOUT_planck_grid(
@@ -69,34 +69,34 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ├──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┤
  * │ Tab  │  Q   │  W   │  E   │  R   │  T   │  Y   │  U   │  I   │  O   │  P   │ Bksp │
  * ├──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┤
- * │Shift │  A   │  S   │  D   │  F   │  G   │  H   │  J   │  K   │  L   │  ↑   │Enter │
+ * │Shift │  A   │  S   │  D   │  F   │  G   │  H   │  J   │  K   │  L   │  ▲   │Enter │
  * ├──────┼──────┼──────┼──────┼──────┼──────┴──────┼──────┼──────┼──────┼──────┼──────┤
- * │ Ctrl │  Y   │  X   │  C   │ Opt  │    Space    │  V   │  B   │  ←   │  ↓   │  →   │
+ * │ Ctrl │  Z   │  X   │  C   │ Opt  │    Space    │  V   │  B   │  ◀︎   │  ▼   │  ►   │
  * └──────┴──────┴──────┴──────┴──────┴─────────────┴──────┴──────┴──────┴──────┴──────┘
  */
 [_GAMING] = LAYOUT_planck_grid(
     KC_N,    KC_1, KC_2, KC_3, KC_4,    KC_5,   KC_6,   KC_7, KC_8, KC_9,    KC_0,    TO(_BASE),
     KC_TAB,  KC_Q, KC_W, KC_E, KC_R,    KC_T,   KC_Y,   KC_U, KC_I, KC_O,    KC_P,    KC_BSPC,
     KC_LSFT, KC_A, KC_S, KC_D, KC_F,    KC_G,   KC_H,   KC_J, KC_K, KC_L,    KC_UP,   KC_ENT,
-    KC_LCTL, KC_Y, KC_X, KC_C, KC_LOPT, KC_SPC, KC_SPC, KC_V, KC_B, KC_LEFT, KC_DOWN, KC_RGHT
+    KC_LCTL, KC_Z, KC_X, KC_C, KC_LOPT, KC_SPC, KC_SPC, KC_V, KC_B, KC_LEFT, KC_DOWN, KC_RGHT
 ),
 
 /* Symbol Layer
  * ┌──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┐
- * │      │      │      │  é   │      │  $   │  §   │  ü   │      │  ö   │  !   │  ?   │
+ * │ Del  │      │      │  é   │      │  $   │  §   │  ü   │      │  ö   │  !   │  ?   │
  * ├──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┤
  * │      │  ä   │  ß   │      │  @   │  #   │  *   │  (   │  [   │  {   │  <   │      │
  * ├──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┤
  * │      │      │      │      │  €   │  %   │  &   │  )   │  ]   │  }   │  >   │      │
  * ├──────┼──────┼──────┼──────┼──────┼──────┴──────┼──────┼──────┼──────┼──────┼──────┤
- * │      │      │      │      │      │             │  |   │      │      │      │      │
+ * │      │      │      │EMOJI_│      │             │  |   │      │      │      │      │
  * └──────┴──────┴──────┴──────┴──────┴─────────────┴──────┴──────┴──────┴──────┴──────┘
  */
 [_SYMBOL] = LAYOUT_planck_grid(
-    XXXXXXX, XXXXXXX, XXXXXXX, E_ACUTE, XXXXXXX, KC_DLR,  SECTION, U_UML,   XXXXXXX, O_UML,   KC_EXLM, KC_QUES,
-    XXXXXXX, A_UML,   S_SHARP, XXXXXXX, KC_AT,   KC_HASH, KC_ASTR, KC_LPRN, KC_LBRC, KC_LCBR, KC_LT,   XXXXXXX,
-    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, EURO,    KC_PERC, KC_AMPR, KC_RPRN, KC_RBRC, KC_RCBR, KC_GT,   XXXXXXX,
-    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, PIPE,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+    KC_DEL,  XXXXXXX, XXXXXXX, E_ACUTE,      XXXXXXX, KC_DLR,  SECTION, U_UML,   XXXXXXX, O_UML,   KC_EXLM, KC_QUES,
+    XXXXXXX, A_UML,   S_SHARP, XXXXXXX,      KC_AT,   KC_HASH, KC_ASTR, KC_LPRN, KC_LBRC, KC_LCBR, KC_LT,   XXXXXXX,
+    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      EURO,    KC_PERC, KC_AMPR, KC_RPRN, KC_RBRC, KC_RCBR, KC_GT,   XXXXXXX,
+    XXXXXXX, XXXXXXX, XXXXXXX, EMOJI_PICKER, XXXXXXX, XXXXXXX, XXXXXXX, PIPE,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 ),
 
 /* Function Layer
@@ -111,10 +111,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * └──────┴──────┴──────┴──────┴──────┴─────────────┴──────┴──────┴──────┴──────┴──────┘
  */
 [_FN] = LAYOUT_planck_grid(
-    KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,       KC_F9,   KC_F10, KC_F11, KC_F12,
-    KC_TAB,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_PSCR, KC_MUTE, TO(_GAMING), XXXXXXX, KC_1,   KC_2,   KC_3,
-    KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_VOLD, KC_VOLU, XXXXXXX,     XXXXXXX, KC_4,   KC_5,   KC_6,
-    KC_LCTL, KC_LOPT, KC_LCMD, XXXXXXX, OSL(_MACROS),  XXXXXXX, XXXXXXX, TO(_EMOJIS), KC_0,    KC_7,   KC_8,   KC_9
+    KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,        KC_F6,   KC_F7,   KC_F8,       KC_F9,   KC_F10, KC_F11, KC_F12,
+    KC_TAB,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      KC_PSCR, KC_MUTE, TO(_GAMING), XXXXXXX, KC_1,   KC_2,   KC_3,
+    KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      KC_VOLD, KC_VOLU, XXXXXXX,     XXXXXXX, KC_4,   KC_5,   KC_6,
+    KC_LCTL, KC_LOPT, KC_LCMD, XXXXXXX, OSL(_MACROS), XXXXXXX, XXXXXXX, TO(_EMOJIS), KC_0,    KC_7,   KC_8,   KC_9
 ),
 
 /* Macros Layer (Python)
@@ -141,16 +141,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ├──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┤
  * │      │      │      │      │      │      │      │      │      │      │      │      │
  * ├──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┤
- * │      │      │      │      │      │      │      │      │      │      │      │      │
+ * │      │      │      │      │      │      │      │      │      │      │  ▲   │Enter │
  * ├──────┼──────┼──────┼──────┼──────┼──────┴──────┼──────┼──────┼──────┼──────┼──────┤
- * │      │      │      │      │      │             │      │      │      │      │      │
+ * │      │      │      │      │      │    Space    │      │      │  ◀︎   │  ▼   │  ►   │
  * └──────┴──────┴──────┴──────┴──────┴─────────────┴──────┴──────┴──────┴──────┴──────┘
  */
 [_EMOJIS] = LAYOUT_planck_grid(
     EMOJI_1, EMOJI_2, EMOJI_3, EMOJI_4, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, TO(_BASE),
     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_UP,   KC_ENT,
+    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_SPC,  XXXXXXX, XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT
 ),
 
 };
@@ -164,13 +164,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 static bool process_shift_aware_keycode(uint16_t base_keycode, uint16_t shift_keycode) {
     uint8_t mods = get_mods();
+    clear_mods();
+    
     if (mods & MOD_MASK_SHIFT) {
-        del_mods(MOD_MASK_SHIFT);
-        tap_code(shift_keycode);
-        set_mods(mods);
+        tap_code16(shift_keycode);
     } else {
         tap_code(base_keycode);
     }
+    
+    set_mods(mods);
     return false;
 }
 
@@ -192,7 +194,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return process_shift_aware_keycode(KC_COMM, KC_SCLN);
 
         case DOT_COLON:
-            return process_shift_aware_keycode(KC_DOT, S(KC_SCLN));
+            return process_shift_aware_keycode(KC_DOT, KC_COLN);
 
         case PIPE:
             tap_code16(S(KC_BSLS));  // Shift+Backslash = |

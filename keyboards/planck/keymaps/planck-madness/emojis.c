@@ -13,6 +13,10 @@ bool process_emojis(uint16_t keycode, keyrecord_t *record) {
     }
 
     switch (keycode) {
+        case EMOJI_PICKER:
+            tap_code16(C(G(KC_SPC)));  // Ctrl+Cmd+Space
+            return false;
+            
         case EMOJI_1:
             send_string_with_delay_P(PSTR("( ._.)"), EMOJI_TYPING_DELAY);
             return false;
